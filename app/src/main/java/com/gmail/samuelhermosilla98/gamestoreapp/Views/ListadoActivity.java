@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.TextView;
 
@@ -32,8 +34,7 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
 
         presenters = new ListadoPresenter(this);
 
@@ -57,6 +58,17 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
 
         AdaptadorDatosDeLaLista adaptador = new AdaptadorDatosDeLaLista();
         reciclador.setAdapter(adaptador);
+
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
     }
 
     @Override
@@ -65,4 +77,39 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
         startActivity(intent);
     }
 
+    @Override
+    protected void onStart(){
+        super.onStart();
+        Log.d(TAG, "Ejecutando onStart...");
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        Log.d(TAG, "Ejecutando onResume...");
+    }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+        Log.d(TAG, "Ejecutando onStop...");
+    }
+
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+        Log.d(TAG, "Ejecutando onRestart...");
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        Log.d(TAG, "Ejecutando onPause...");
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        Log.d(TAG, "Ejecutando onDestroy...");
+    }
 }

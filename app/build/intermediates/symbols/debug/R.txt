@@ -1311,6 +1311,7 @@ int layout select_dialog_item_material 0x7f0b0039
 int layout select_dialog_multichoice_material 0x7f0b003a
 int layout select_dialog_singlechoice_material 0x7f0b003b
 int layout support_simple_spinner_dropdown_item 0x7f0b003c
+int layout toolbar 0x7f0b003d
 int menu menu_main 0x7f0c0000
 int mipmap borderlands 0x7f0d0000
 int mipmap cod 0x7f0d0001

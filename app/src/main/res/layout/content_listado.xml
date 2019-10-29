@@ -13,14 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0 resultados encontrados"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="66dp" />
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="25dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reciclador"
         android:layout_width="409dp"
-        android:layout_height="638dp"
+        android:layout_height="607dp"
         android:scrollbars="vertical"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="95dp" />
+        tools:layout_editor_absoluteY="67dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,7 +18,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.gmail.samuelhermosilla98.gamestoreapp.R;
@@ -35,6 +37,8 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         presenters = new ListadoPresenter(this);
 
@@ -48,6 +52,8 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
             }
         });
 
+
+
         reciclador = (RecyclerView) findViewById(R.id.reciclador);
 
         TextView t = findViewById(R.id.text);
@@ -58,10 +64,12 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
 
         AdaptadorDatosDeLaLista adaptador = new AdaptadorDatosDeLaLista();
         reciclador.setAdapter(adaptador);
+    }
 
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+    @Override
+    public void lanzarFormulario() {
+        Intent intent = new Intent(ListadoActivity.this, FormularioActivity.class);
+        startActivity(intent);
     }
 
     @Override
@@ -72,44 +80,18 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
     }
 
     @Override
-    public void lanzarFormulario() {
-        Intent intent = new Intent(ListadoActivity.this, FormularioActivity.class);
-        startActivity(intent);
-    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_settings2:
+                Intent intent2 = new Intent(ListadoActivity.this, LogoActivity.class);
+                startActivity(intent2);
+                return true;
+            case R.id.action_settings:
 
-    @Override
-    protected void onStart(){
-        super.onStart();
-        Log.d(TAG, "Ejecutando onStart...");
-    }
-
-    @Override
-    protected void onResume(){
-        super.onResume();
-        Log.d(TAG, "Ejecutando onResume...");
-    }
-
-    @Override
-    protected void onStop(){
-        super.onStop();
-        Log.d(TAG, "Ejecutando onStop...");
-    }
-
-    @Override
-    protected void onRestart(){
-        super.onRestart();
-        Log.d(TAG, "Ejecutando onRestart...");
-    }
-
-    @Override
-    protected void onPause(){
-        super.onPause();
-        Log.d(TAG, "Ejecutando onPause...");
-    }
-
-    @Override
-    protected void onDestroy(){
-        super.onDestroy();
-        Log.d(TAG, "Ejecutando onDestroy...");
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\DRIVE\\GRADO\\2\\DEIN\\AndroidStudioProjects\\GameStoreAPP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-my\\values-my.xml",
+            "outputFile": "D:\\DRIVE\\GRADO\\2\\DEIN\\AndroidStudioProjects\\GameStpreAPP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-my\\values-my.xml",
             "map": [
                 {
                     "source": "C:\\Users\\LymmeL\\.gradle\\caches\\transforms-2\\files-2.1\\46da25c3e2ae6308b2227b660caa604d\\core-1.0.1\\res\\values-my\\values-my.xml",

@@ -8,7 +8,6 @@ import com.gmail.samuelhermosilla98.gamestoreapp.Models.AdaptadorDatosDeLaLista;
 import com.gmail.samuelhermosilla98.gamestoreapp.Models.DatosDeLaLista;
 import com.gmail.samuelhermosilla98.gamestoreapp.Presenter.ListadoPresenter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -20,14 +19,13 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.gmail.samuelhermosilla98.gamestoreapp.R;
 
 public class ListadoActivity extends AppCompatActivity implements ListadoInterface.View {
 
-    String TAG = "GameStoreAPP/LogoActivity";
+    String TAG = "GameStoreAPP/ListadoActivity";
     RecyclerView reciclador;
     LinearLayoutManager layoutManager;
     private ListadoInterface.Presenter presenters;
@@ -42,11 +40,11 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
 
         presenters = new ListadoPresenter(this);
 
-        FloatingActionButton fab = findViewById(R.id.listadoFButton);
+        FloatingActionButton fab = findViewById(R.id.añadir);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "Pulsando botón flotante...");
+                Log.d(TAG, "Pulsando botón añadir...");
                 Intent intent = new Intent(ListadoActivity.this, FormularioActivity.class);
                 startActivity(intent);
             }

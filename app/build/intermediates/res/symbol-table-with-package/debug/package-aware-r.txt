@@ -1047,6 +1047,8 @@ id action_mode_bar_stub
 id action_mode_close_button
 id action_settings
 id action_settings2
+id action_settings3
+id action_settings4
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1056,6 +1058,7 @@ id all
 id always
 id async
 id auto
+id añadir
 id barrier
 id beginning
 id blocking
@@ -1065,6 +1068,7 @@ id center
 id center_horizontal
 id center_vertical
 id chains
+id checkBox
 id checkbox
 id chronometer
 id clip_horizontal
@@ -1086,6 +1090,9 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id editText
+id editText2
+id editText3
 id edit_query
 id end
 id enterAlways
@@ -1110,7 +1117,11 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imageButton
+id imageButton2
+id imageButton3
 id imageView
+id imageView2
 id imagen
 id info
 id invisible
@@ -1123,7 +1134,6 @@ id line1
 id line3
 id listMode
 id list_item
-id listadoFButton
 id masked
 id message
 id middle
@@ -1206,6 +1216,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id text_input_password_toggle
 id textinput_counter
 id textinput_error
@@ -1314,6 +1325,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 layout toolbar
+menu menu_formulario
 menu menu_main
 mipmap borderlands
 mipmap cod
@@ -1321,6 +1333,7 @@ mipmap csgo
 mipmap iao
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap images
 mipmap paladins
 mipmap play
 mipmap sword
@@ -1366,6 +1379,8 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string action_settings
 string action_settings2
+string action_settings3
+string action_settings4
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior

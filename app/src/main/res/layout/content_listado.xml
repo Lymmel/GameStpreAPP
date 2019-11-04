@@ -8,6 +8,12 @@
     tools:context=".Views.ListadoActivity"
     tools:showIn="@layout/activity_listado">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        >
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
@@ -16,6 +22,7 @@
         tools:layout_editor_absoluteX="35dp"
         tools:layout_editor_absoluteY="25dp" />
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/reciclador"
         android:layout_width="409dp"
@@ -23,4 +30,5 @@
         android:scrollbars="vertical"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="67dp" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

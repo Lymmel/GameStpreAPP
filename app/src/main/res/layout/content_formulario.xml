@@ -8,4 +8,89 @@
     tools:context=".Views.FormularioActivity"
     tools:showIn="@layout/activity_formulario">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:orientation="vertical">
+
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="44dp"
+                android:layout_height="39dp"
+                app:srcCompat="@android:drawable/sym_def_app_icon" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Nombre"
+                android:inputType="textPersonName" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="44dp"
+                android:layout_height="39dp"
+                app:srcCompat="@android:drawable/star_big_on"
+                android:layout_marginTop="35dp"/>
+
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Precio"
+                android:inputType="textPersonName" />
+
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="44dp"
+                android:layout_height="39dp"
+                app:srcCompat="@android:drawable/presence_away"
+                android:layout_marginTop="35dp"/>
+
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Fecha"
+                android:inputType="date" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Añade tu imagen"
+                android:layout_marginTop="42dp"/>
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="#00941717"
+                android:src="@mipmap/images" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="¿Todo correcto?" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

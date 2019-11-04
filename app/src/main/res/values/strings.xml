@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">GameStoreAPP</string>
     <string name="action_settings">About</string>
-    <string name="action_settings2">Volver</string>
+    <string name="action_settings2">Volver al Logo</string>
+    <string name="action_settings4">Volver al Listado</string>
+    <string name="action_settings3">Añadir tu campo personalizado</string>
     <string name="title_activity_listado">Tu lista de juegos</string>
     <string name="title_activity_formulario">Añade tu juego a la lista</string>
 </resources>

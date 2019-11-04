@@ -16,7 +16,8 @@
         <activity
             android:name=".Views.FormularioActivity"
             android:label="@string/title_activity_formulario"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Views.ListadoActivity"/>
         <activity
             android:name=".Views.LogoActivity"
             android:label="@string/app_name"

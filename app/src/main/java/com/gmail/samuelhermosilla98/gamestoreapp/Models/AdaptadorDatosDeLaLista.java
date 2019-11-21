@@ -23,7 +23,7 @@ public class AdaptadorDatosDeLaLista extends RecyclerView.Adapter<AdaptadorDatos
             super(v);
 
             imagen = (ImageView) v.findViewById(R.id.imagen);
-            nombre = (TextView) v.findViewById(R.id.nombre);
+            nombre = (TextView) v.findViewById(R.id.nombreid);
             precio = (TextView) v.findViewById(R.id.precio);
         }
     }

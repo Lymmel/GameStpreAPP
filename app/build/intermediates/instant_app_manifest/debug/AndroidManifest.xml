@@ -17,7 +17,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.SobreAppCRUD"
+            android:label="@string/title_activity_sobre_app_crud"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.Buscar"
+            android:label="@string/title_activity_buscar"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.ListadoActivity"
             android:configChanges="orientation"

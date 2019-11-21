@@ -1,9 +1,18 @@
 <resources>
     <string name="app_name">GameStoreAPP</string>
-    <string name="action_settings">About</string>
-    <string name="action_settings2">Volver al Logo</string>
+    <string name="action_settings">Buscar</string>
+    <string name="action_settings2">Ordenar</string>
+    <string name="action_settings22">Configuración</string>
+    <string name="action_settings222">Sobre AppCRUD</string>
     <string name="action_settings4">Volver al Listado</string>
     <string name="action_settings3">Añadir tu campo personalizado</string>
     <string name="title_activity_listado">Tu lista de juegos</string>
     <string name="title_activity_formulario">Añade tu juego a la lista</string>
+    <string name="title_activity_buscar">Buscar</string>
+    <string name="title_activity_sobre_app_crud">SobreAppCRUD</string>
+
+    <string name="titlulo_pickers">Obtener fecha y hora</string>
+    <string name="formato_fecha">dd/mm/yyyy</string>
+    <string name="formato_hora">hh:mm</string>
+    <string name="title_activity_pickers">PickersActivity</string>
 </resources>

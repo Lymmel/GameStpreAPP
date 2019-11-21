@@ -73,11 +73,46 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main, menu);
+        inflater.inflate(R.menu.menu_listado, menu);
         return true;
     }
 
     @Override
+    protected void onStart(){
+        super.onStart();
+        Log.d(TAG, "Ejecutando onStart...");
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        Log.d(TAG, "Ejecutando onResume...");
+    }
+
+    @Override
+    protected void onStop(){
+        super.onStop();
+        Log.d(TAG, "Ejecutando onStop...");
+    }
+
+    @Override
+    protected void onRestart(){
+        super.onRestart();
+        Log.d(TAG, "Ejecutando onRestart...");
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        Log.d(TAG, "Ejecutando onPause...");
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        Log.d(TAG, "Ejecutando onDestroy...");
+    }
+   /* @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
@@ -92,4 +127,5 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
                 return super.onOptionsItemSelected(item);
         }
     }
+    */
 }

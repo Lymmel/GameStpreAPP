@@ -10,25 +10,32 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Views.SobreAppCRUD"
+            android:label="@string/title_activity_sobre_app_crud"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Views.Buscar"
+            android:label="@string/title_activity_buscar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".Views.ListadoActivity"
-            android:label="@string/title_activity_listado"
-            android:theme="@style/AppTheme.NoActionBar"
             android:configChanges="orientation"
-            android:screenOrientation="sensor" ></activity>
-
+            android:label="@string/title_activity_listado"
+            android:screenOrientation="sensor"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Views.FormularioActivity"
-            android:label="@string/title_activity_formulario"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".Views.ListadoActivity"
             android:configChanges="orientation"
-            android:screenOrientation="sensor"/>
+            android:label="@string/title_activity_formulario"
+            android:parentActivityName=".Views.ListadoActivity"
+            android:screenOrientation="sensor"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Views.LogoActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
             android:configChanges="orientation"
-            android:screenOrientation="sensor">
+            android:label="@string/app_name"
+            android:screenOrientation="sensor"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

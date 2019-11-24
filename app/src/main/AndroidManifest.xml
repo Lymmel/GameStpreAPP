@@ -16,6 +16,7 @@
         <activity
             android:name=".Views.Buscar"
             android:label="@string/title_activity_buscar"
+            android:parentActivityName=".Views.ListadoActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Views.ListadoActivity"

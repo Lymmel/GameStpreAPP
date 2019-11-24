@@ -254,7 +254,7 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.action_settings2:
-                Intent intent2 = new Intent(FormularioActivity.this, LogoActivity.class);
+                Intent intent2 = new Intent(FormularioActivity.this, ListadoActivity.class);
                 startActivity(intent2);
                 return true;
             case R.id.action_settings4:

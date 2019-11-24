@@ -25,6 +25,7 @@
         <activity
             android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.Buscar"
             android:label="@string/title_activity_buscar"
+            android:parentActivityName="com.gmail.samuelhermosilla98.gamestoreapp.Views.ListadoActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.ListadoActivity"

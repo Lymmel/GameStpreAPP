@@ -112,20 +112,21 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
         super.onDestroy();
         Log.d(TAG, "Ejecutando onDestroy...");
     }
-   /* @Override
+
+   @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
         switch (item.getItemId()) {
-            case R.id.action_settings2:
-                Intent intent2 = new Intent(ListadoActivity.this, LogoActivity.class);
+            case R.id.action_settings:
+                Intent intent2 = new Intent(ListadoActivity.this, Buscar.class);
                 startActivity(intent2);
                 return true;
-            case R.id.action_settings:
 
-                return true;
+
+
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
-    */
+
 }

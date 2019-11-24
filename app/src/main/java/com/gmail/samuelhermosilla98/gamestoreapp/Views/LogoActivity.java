@@ -28,6 +28,7 @@ public class LogoActivity extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(LogoActivity.this, ListadoActivity.class);
                 startActivity(intent);
+                finish();
             }
         },5000);
     }

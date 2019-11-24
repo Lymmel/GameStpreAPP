@@ -1,4 +1,4 @@
-#Sun Nov 24 13:37:44 CET 2019
+#Sun Nov 24 16:33:11 CET 2019
 base.0=D\:\\DRIVE\\GRADO\\2\\DEIN\\AndroidStudioProjects\\GameStpreAPP\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

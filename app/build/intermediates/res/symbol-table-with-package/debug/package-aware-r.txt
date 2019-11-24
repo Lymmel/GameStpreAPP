@@ -1006,6 +1006,7 @@ drawable ic_launcher_foreground
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_search_black_24dp
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
@@ -1045,6 +1046,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_nuevo
 id action_settings
 id action_settings2
 id action_settings22
@@ -1065,7 +1067,6 @@ id barrier
 id beginning
 id blocking
 id bottom
-id button
 id buttonPanel
 id center
 id center_horizontal
@@ -1083,13 +1084,16 @@ id contentPanel
 id coordinator
 id custom
 id customPanel
+id custom_dialog_layout_design_user_input
 id decor_content_parent
 id default_activity_button
+id delete
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id dialogTitle
 id dimensions
 id direct
 id disableHome
@@ -1246,6 +1250,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id userInputDialog
 id view_offset_helper
 id visible
 id withText
@@ -1336,6 +1341,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 layout toolbar
+layout user_input_dialog_box
 menu menu_formulario
 menu menu_listado
 mipmap borderlands
@@ -1389,6 +1395,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_nuevo
 string action_settings
 string action_settings2
 string action_settings22

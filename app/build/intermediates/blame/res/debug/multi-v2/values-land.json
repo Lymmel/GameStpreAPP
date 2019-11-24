@@ -4,7 +4,7 @@
             "outputFile": "D:\\DRIVE\\GRADO\\2\\DEIN\\AndroidStudioProjects\\GameStpreAPP\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\LymmeL\\.gradle\\caches\\transforms-2\\files-2.1\\dfb17c32c9e1bced7bb89f3e844a7607\\appcompat-1.0.2\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\LymmeL\\.gradle\\caches\\transforms-2\\files-2.1\\4002c918410b87d682b4db69afb98571\\appcompat-1.0.2\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LymmeL\\.gradle\\caches\\transforms-2\\files-2.1\\9ee5da6fca20f6f07dce6c73fc4ca33a\\material-1.0.0\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\LymmeL\\.gradle\\caches\\transforms-2\\files-2.1\\35621a79f3b461e7b214e81b509f763d\\material-1.0.0\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

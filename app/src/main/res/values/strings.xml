@@ -10,9 +10,9 @@
     <string name="title_activity_formulario">Añade tu juego a la lista</string>
     <string name="title_activity_buscar">Buscar</string>
     <string name="title_activity_sobre_app_crud">SobreAppCRUD</string>
-
     <string name="titlulo_pickers">Obtener fecha y hora</string>
     <string name="formato_fecha">dd/mm/yyyy</string>
     <string name="formato_hora">hh:mm</string>
     <string name="title_activity_pickers">PickersActivity</string>
+    <string name="action_nuevo"></string>
 </resources>

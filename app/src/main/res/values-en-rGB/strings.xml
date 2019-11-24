@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GameStoreAPP</string>
+    <string name="action_settings">Search</string>
+    <string name="action_settings2">Order</string>
+    <string name="action_settings22">Configuration</string>
+    <string name="action_settings222">About AppCRUD</string>
+    <string name="action_settings3">Add our field</string>
+    <string name="action_settings4">back to list</string>
+    <string name="formato_fecha">dd/mm/yyyy</string>
+    <string name="formato_hora">hh:mm</string>
+    <string name="title_activity_buscar">Search</string>
+    <string name="title_activity_formulario">Add your game</string>
+    <string name="title_activity_listado">your game list</string>
+    <string name="title_activity_pickers">PickersActivity</string>
+    <string name="title_activity_sobre_app_crud">About AppCRUD</string>
+    <string name="titlulo_pickers">give date</string>
+    <string name="action_nuevo"></string>
+</resources>

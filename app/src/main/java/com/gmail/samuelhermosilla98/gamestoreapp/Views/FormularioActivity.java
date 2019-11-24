@@ -1,6 +1,9 @@
 package com.gmail.samuelhermosilla98.gamestoreapp.Views;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -13,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -50,6 +54,11 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
     ImageButton ibObtenerFecha;
     //fin DatePicker variables
 
+    //Alert Dialog button
+    private Button mButton;
+    private Button delAlertBt;
+    final Context ct = this;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +76,12 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
 
         presenter = new FormularioPresenter(this);
 
+        //Botón añadir opción al desplegable del menú
+        Button bnuevo = findViewById(R.id.action_nuevo);
+        final Context c = this;
+
+
+
         FloatingActionButton fab = findViewById(R.id.añadir);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +97,7 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
         ActionBar ab = getSupportActionBar();
 
         ab.setDisplayHomeAsUpEnabled(true);
+
 
         //Comprobar Nombre a través del Presenter
         TextInputEditText nombreEditText = (TextInputEditText) findViewById(R.id.nombreEditText);
@@ -131,6 +147,63 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
 
 
 
+
+        /*
+        mButton = (Button) findViewById(R.id.action_nuevo);
+        mButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                LayoutInflater layoutInflaterAndroid = LayoutInflater.from(ct);
+                View mView = layoutInflaterAndroid.inflate(R.layout.user_input_dialog_box, null);
+                AlertDialog.Builder alertDialogBuilderUserInput = new AlertDialog.Builder(ct);
+                alertDialogBuilderUserInput.setView(mView);
+
+                final EditText userInputDialogEditText = (EditText) mView.findViewById(R.id.userInputDialog);
+                alertDialogBuilderUserInput
+                        .setCancelable(false)
+                        .setPositiveButton("Send", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialogBox, int id) {
+                                // ToDo get user input here
+                            }
+                        })
+
+                        .setNegativeButton("Cancel",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialogBox, int id) {
+                                        dialogBox.cancel();
+                                    }
+                                });
+
+                AlertDialog alertDialogAndroid = alertDialogBuilderUserInput.create();
+                alertDialogAndroid.show();
+            }
+        });
+        */
+
+        delAlertBt = (Button) findViewById(R.id.delete);
+        delAlertBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder alert = new AlertDialog.Builder(FormularioActivity.this);
+                alert.setMessage("¿Estás seguro de eliminar este item?")
+                        .setCancelable(false)
+                        .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                finish();
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog title = alert.create();
+                title.setTitle("Borrar");
+                title.show();
+            }
+        });
     }
 
     //DatePicker methods
@@ -141,6 +214,7 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
                 obtenerFecha();
                 break;
         }
+
     }
 
     private void obtenerFecha(){
@@ -238,6 +312,9 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
         super.onDestroy();
         Log.d(TAG, "Ejecutando onDestroy...");
     }
+
+
+
 
 
 }

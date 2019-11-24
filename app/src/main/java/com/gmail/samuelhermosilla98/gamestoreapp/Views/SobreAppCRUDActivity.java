@@ -2,9 +2,12 @@ package com.gmail.samuelhermosilla98.gamestoreapp.Views;
 
 import android.os.Bundle;
 
+import com.gmail.samuelhermosilla98.gamestoreapp.Interfaces.SobreAppCRUDInterface;
+import com.gmail.samuelhermosilla98.gamestoreapp.Presenter.SobreAppCRUDPresenter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -13,9 +16,11 @@ import android.view.View;
 
 import com.gmail.samuelhermosilla98.gamestoreapp.R;
 
-public class SobreAppCRUD extends AppCompatActivity {
+public class SobreAppCRUDActivity extends AppCompatActivity implements SobreAppCRUDInterface.View, View.OnClickListener {
 
     String TAG = "GameStoreAPP/SobreAppCRUDActivity";
+    //presentador
+    private SobreAppCRUDInterface.Presenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,13 @@ public class SobreAppCRUD extends AppCompatActivity {
         setContentView(R.layout.activity_sobre_app_crud);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        presenter = new SobreAppCRUDPresenter(this);
+
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar ab = getSupportActionBar();
+
+        ab.setDisplayHomeAsUpEnabled(true);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +44,8 @@ public class SobreAppCRUD extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
     }
 
 
@@ -69,5 +83,15 @@ public class SobreAppCRUD extends AppCompatActivity {
     protected void onDestroy(){
         super.onDestroy();
         Log.d(TAG, "Ejecutando onDestroy...");
+    }
+
+    @Override
+    public void onClick(View v) {
+
+    }
+
+    @Override
+    public void lanzarFormulario() {
+
     }
 }

@@ -118,12 +118,13 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.action_settings:
-                Intent intent2 = new Intent(ListadoActivity.this, Buscar.class);
+                Intent intent2 = new Intent(ListadoActivity.this, BuscarActivity.class);
                 startActivity(intent2);
                 return true;
-
-
-
+            case R.id.action_settings222:
+                Intent intent3 = new Intent(ListadoActivity.this, SobreAppCRUDActivity.class);
+                startActivity(intent3);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

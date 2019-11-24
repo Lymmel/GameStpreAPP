@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GameStoreAPP</string>
+    <string name="app_name">Game Store</string>
     <string name="action_settings">Buscar</string>
     <string name="action_settings2">Ordenar</string>
     <string name="action_settings22">Configuración</string>
@@ -15,4 +15,14 @@
     <string name="formato_hora">hh:mm</string>
     <string name="title_activity_pickers">PickersActivity</string>
     <string name="action_nuevo"></string>
+    <string name="name">Nombre: </string>
+    <string name="datos">Datos del Desarrollador: </string>
+    <string name="contacto">Contacto: </string>
+    <string name="prueba1">Prueba 1</string>
+    <string name="prueba2">Prueba 2</string>
+    <string name="prueba3">Prueba 3</string>
+    <string name="añadeImg">Añade tu imagen:</string>
+    <string name="todocorrecto">¿Todo correcto?</string>
+    <string name="addtosp">Añadir al Spinner</string>
+
 </resources>

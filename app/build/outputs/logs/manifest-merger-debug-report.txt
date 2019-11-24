@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-48:12
+ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-49:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\LymmeL\.gradle\caches\transforms-2\files-2.1\35621a79f3b461e7b214e81b509f763d\material-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\LymmeL\.gradle\caches\transforms-2\files-2.1\4002c918410b87d682b4db69afb98571\appcompat-1.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\LymmeL\.gradle\caches\transforms-2\files-2.1\0f37eb602f5f3905f5dec8633dd0a112\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
@@ -37,25 +37,25 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\LymmeL\.gradle\c
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\LymmeL\.gradle\caches\transforms-2\files-2.1\4f56b15aabd6a93f0aaef6f4dd48d402\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\LymmeL\.gradle\caches\transforms-2\files-2.1\f71955ad5c679428e3b98664421cf7a3\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\LymmeL\.gradle\caches\transforms-2\files-2.1\6a6175ce9e65edae6489f76712410ebd\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-48:12
-INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-48:12
+INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-49:12
 	package
 		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:3:5-56
 		INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml
 		INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-48:12
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-49:12
 		INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-48:12
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:1-49:12
 		INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:5:5-46:19
+ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:5:5-47:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\LymmeL\.gradle\caches\transforms-2\files-2.1\35621a79f3b461e7b214e81b509f763d\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\LymmeL\.gradle\caches\transforms-2\files-2.1\35621a79f3b461e7b214e81b509f763d\material-1.0.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\LymmeL\.gradle\caches\transforms-2\files-2.1\0f37eb602f5f3905f5dec8633dd0a112\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
@@ -82,72 +82,74 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.8.0] C:\Users\LymmeL\.gradle
 		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
 		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:11:9-40
-activity#com.gmail.samuelhermosilla98.gamestoreapp.Views.SobreAppCRUD
-ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:12:9-15:59
+activity#com.gmail.samuelhermosilla98.gamestoreapp.Views.SobreAppCRUDActivity
+ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:12:9-16:59
+	android:parentActivityName
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:15:13-64
 	android:label
 		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:14:13-66
 	android:theme
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:15:13-56
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:16:13-56
 	android:name
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:13:13-47
-activity#com.gmail.samuelhermosilla98.gamestoreapp.Views.Buscar
-ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:16:9-20:59
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:13:13-55
+activity#com.gmail.samuelhermosilla98.gamestoreapp.Views.BuscarActivity
+ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:17:9-21:59
 	android:parentActivityName
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:19:13-64
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:20:13-64
 	android:label
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:18:13-58
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:19:13-58
 	android:theme
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:20:13-56
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:21:13-56
 	android:name
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:17:13-41
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:18:13-49
 activity#com.gmail.samuelhermosilla98.gamestoreapp.Views.ListadoActivity
-ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:21:9-26:59
+ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:22:9-27:59
 	android:screenOrientation
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:25:13-47
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:26:13-47
 	android:label
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:24:13-59
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:25:13-59
 	android:configChanges
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:23:13-48
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:24:13-48
 	android:theme
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:26:13-56
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:27:13-56
 	android:name
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:22:13-50
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:23:13-50
 activity#com.gmail.samuelhermosilla98.gamestoreapp.Views.FormularioActivity
-ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:27:9-33:59
+ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:28:9-34:59
 	android:screenOrientation
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:32:13-47
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:33:13-47
 	android:parentActivityName
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:31:13-64
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:32:13-64
 	android:label
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:30:13-62
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:31:13-62
 	android:configChanges
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:29:13-48
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:30:13-48
 	android:theme
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:33:13-56
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:34:13-56
 	android:name
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:28:13-53
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:29:13-53
 activity#com.gmail.samuelhermosilla98.gamestoreapp.Views.LogoActivity
-ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:34:9-45:20
+ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:35:9-46:20
 	android:screenOrientation
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:38:13-47
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:39:13-47
 	android:label
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:37:13-45
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:38:13-45
 	android:configChanges
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:36:13-48
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:37:13-48
 	android:theme
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:39:13-56
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:40:13-56
 	android:name
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:35:13-47
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:36:13-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:40:13-44:29
+ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:41:13-45:29
 action#android.intent.action.MAIN
-ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:41:17-69
+ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:42:17-69
 	android:name
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:41:25-66
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:42:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:43:17-77
+ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:44:17-77
 	android:name
-		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:43:27-74
+		ADDED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:44:27-74
 uses-sdk
 INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml

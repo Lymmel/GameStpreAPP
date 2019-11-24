@@ -64,6 +64,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="" />
+
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <ImageButton
@@ -94,12 +96,27 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+
+            <Spinner
+                android:id="@+id/spinnerrr"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <Button
+                android:id="@+id/addtospinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/addtosp" />
+
+
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="42dp"
-                android:text="Añade tu imagen" />
+                android:text="@string/añadeImg" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -115,7 +132,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="¿Todo correcto?" />
+                android:text="@string/todocorrecto" />
 
             <Button
                 android:id="@+id/delete"
@@ -124,6 +141,7 @@
                 android:layout_marginLeft="220dp"
                 android:background="@mipmap/delete" />
         </LinearLayout>
+
 
     </ScrollView>
 

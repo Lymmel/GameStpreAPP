@@ -16,4 +16,13 @@
     <string name="title_activity_sobre_app_crud">About AppCRUD</string>
     <string name="titlulo_pickers">give date</string>
     <string name="action_nuevo"></string>
+    <string name="name">Name: </string>
+    <string name="datos">Programmer data: </string>
+    <string name="contacto">Contact: </string>
+    <string name="prueba1">Prueba 1</string>
+    <string name="prueba2">Prueba 2</string>
+    <string name="prueba3">Prueba 3</string>
+    <string name="añadeImg">Add your imagen</string>
+    <string name="todocorrecto">¿All correctly?</string>
+    <string name="addtosp">Add to Spinner</string>
 </resources>

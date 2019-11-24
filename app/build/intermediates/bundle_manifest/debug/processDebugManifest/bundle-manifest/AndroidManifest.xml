@@ -19,11 +19,12 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.SobreAppCRUD"
+            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.SobreAppCRUDActivity"
             android:label="@string/title_activity_sobre_app_crud"
+            android:parentActivityName="com.gmail.samuelhermosilla98.gamestoreapp.Views.ListadoActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.Buscar"
+            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.BuscarActivity"
             android:label="@string/title_activity_buscar"
             android:parentActivityName="com.gmail.samuelhermosilla98.gamestoreapp.Views.ListadoActivity"
             android:theme="@style/AppTheme.NoActionBar" />

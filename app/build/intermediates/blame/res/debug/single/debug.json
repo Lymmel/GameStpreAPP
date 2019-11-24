@@ -492,12 +492,12 @@
         "source": "C:\\Users\\LymmeL\\.gradle\\caches\\transforms-2\\files-2.1\\35621a79f3b461e7b214e81b509f763d\\material-1.0.0\\res\\color\\mtrl_chip_text_color.xml"
     },
     {
-        "merged": "D:\\DRIVE\\GRADO\\2\\DEIN\\AndroidStudioProjects\\GameStpreAPP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "C:\\Users\\LymmeL\\.gradle\\caches\\transforms-2\\files-2.1\\4002c918410b87d682b4db69afb98571\\appcompat-1.0.2\\res\\drawable-ldrtl-mdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "D:\\DRIVE\\GRADO\\2\\DEIN\\AndroidStudioProjects\\GameStpreAPP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
         "source": "C:\\Users\\LymmeL\\.gradle\\caches\\transforms-2\\files-2.1\\4002c918410b87d682b4db69afb98571\\appcompat-1.0.2\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "D:\\DRIVE\\GRADO\\2\\DEIN\\AndroidStudioProjects\\GameStpreAPP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-mdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "C:\\Users\\LymmeL\\.gradle\\caches\\transforms-2\\files-2.1\\4002c918410b87d682b4db69afb98571\\appcompat-1.0.2\\res\\drawable-ldrtl-mdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "D:\\DRIVE\\GRADO\\2\\DEIN\\AndroidStudioProjects\\GameStpreAPP\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_popup_exit.xml.flat",
@@ -1512,6 +1512,10 @@
         "source": "C:\\Users\\LymmeL\\.gradle\\caches\\transforms-2\\files-2.1\\4002c918410b87d682b4db69afb98571\\appcompat-1.0.2\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
     },
     {
+        "merged": "D:\\DRIVE\\GRADO\\2\\DEIN\\AndroidStudioProjects\\GameStpreAPP\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_sobre_app_crud.xml.flat",
+        "source": "D:\\DRIVE\\GRADO\\2\\DEIN\\AndroidStudioProjects\\GameStpreAPP\\app\\src\\main\\res\\layout-land\\activity_sobre_app_crud.xml"
+    },
+    {
         "merged": "D:\\DRIVE\\GRADO\\2\\DEIN\\AndroidStudioProjects\\GameStpreAPP\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_hide_motion_spec.xml.flat",
         "source": "C:\\Users\\LymmeL\\.gradle\\caches\\transforms-2\\files-2.1\\35621a79f3b461e7b214e81b509f763d\\material-1.0.0\\res\\animator\\mtrl_fab_hide_motion_spec.xml"
     },
@@ -1682,6 +1686,10 @@
     {
         "merged": "D:\\DRIVE\\GRADO\\2\\DEIN\\AndroidStudioProjects\\GameStpreAPP\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_chip_close_icon_tint.xml.flat",
         "source": "C:\\Users\\LymmeL\\.gradle\\caches\\transforms-2\\files-2.1\\35621a79f3b461e7b214e81b509f763d\\material-1.0.0\\res\\color\\mtrl_chip_close_icon_tint.xml"
+    },
+    {
+        "merged": "D:\\DRIVE\\GRADO\\2\\DEIN\\AndroidStudioProjects\\GameStpreAPP\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_buscar.xml.flat",
+        "source": "D:\\DRIVE\\GRADO\\2\\DEIN\\AndroidStudioProjects\\GameStpreAPP\\app\\src\\main\\res\\layout-land\\activity_buscar.xml"
     },
     {
         "merged": "D:\\DRIVE\\GRADO\\2\\DEIN\\AndroidStudioProjects\\GameStpreAPP\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13_mtrl_layout_snackbar.xml.flat",

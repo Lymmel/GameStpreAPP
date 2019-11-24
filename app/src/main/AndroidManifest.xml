@@ -10,11 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Views.SobreAppCRUD"
+            android:name=".Views.SobreAppCRUDActivity"
             android:label="@string/title_activity_sobre_app_crud"
+            android:parentActivityName=".Views.ListadoActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Views.Buscar"
+            android:name=".Views.BuscarActivity"
             android:label="@string/title_activity_buscar"
             android:parentActivityName=".Views.ListadoActivity"
             android:theme="@style/AppTheme.NoActionBar" />

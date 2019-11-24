@@ -20,18 +20,25 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 
 import com.gmail.samuelhermosilla98.gamestoreapp.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class FormularioActivity extends AppCompatActivity implements FormularioInterface.View, View.OnClickListener {
+
+    //Spinner
+    private Spinner spinner;
+    private ArrayAdapter<String> adapter;
 
     String TAG = "GameStoreAPP/FormularioActivity";
     private FormularioInterface.Presenter presenter;
@@ -77,7 +84,7 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
         presenter = new FormularioPresenter(this);
 
         //Botón añadir opción al desplegable del menú
-        Button bnuevo = findViewById(R.id.action_nuevo);
+        Button bnuevo = findViewById(R.id.addtospinner);
         final Context c = this;
 
 
@@ -98,6 +105,21 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
 
         ab.setDisplayHomeAsUpEnabled(true);
 
+        // Definición de la lista de opciones
+        ArrayList<String> items = new ArrayList<String>();
+        items.add("Categoría:");
+        items.add("Shooter.");
+        items.add("RolPlayGame.");
+        items.add("Estrategia.");
+        items.add("Deportes");
+
+        // Definición del Adaptador que contiene la lista de opciones
+        adapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, items);
+        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+
+        // Definición del Spinner
+        spinner = (Spinner) findViewById(R.id.spinnerrr);
+        spinner.setAdapter(adapter);
 
         //Comprobar Nombre a través del Presenter
         TextInputEditText nombreEditText = (TextInputEditText) findViewById(R.id.nombreEditText);
@@ -148,8 +170,8 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
 
 
 
-        /*
-        mButton = (Button) findViewById(R.id.action_nuevo);
+
+        mButton = (Button) findViewById(R.id.addtospinner);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -178,7 +200,7 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
                 alertDialogAndroid.show();
             }
         });
-        */
+
 
         delAlertBt = (Button) findViewById(R.id.delete);
         delAlertBt.setOnClickListener(new View.OnClickListener() {

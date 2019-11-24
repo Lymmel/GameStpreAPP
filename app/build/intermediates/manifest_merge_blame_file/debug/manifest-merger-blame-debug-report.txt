@@ -11,7 +11,7 @@
 9-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:5:5-46:19
+11-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:5:5-47:19
 12        android:allowBackup="true"
 12-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -29,72 +29,74 @@
 20        android:theme="@style/AppTheme" >
 20-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:11:9-40
 21        <activity
-21-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:12:9-15:59
-22            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.SobreAppCRUD"
-22-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:13:13-47
+21-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:12:9-16:59
+22            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.SobreAppCRUDActivity"
+22-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:13:13-55
 23            android:label="@string/title_activity_sobre_app_crud"
 23-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:14:13-66
-24            android:theme="@style/AppTheme.NoActionBar" />
-24-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:15:13-56
-25        <activity
-25-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:16:9-20:59
-26            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.Buscar"
-26-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:17:13-41
-27            android:label="@string/title_activity_buscar"
-27-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:18:13-58
-28            android:parentActivityName="com.gmail.samuelhermosilla98.gamestoreapp.Views.ListadoActivity"
-28-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:19:13-64
-29            android:theme="@style/AppTheme.NoActionBar" />
-29-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:20:13-56
-30        <activity
-30-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:21:9-26:59
-31            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.ListadoActivity"
-31-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:22:13-50
-32            android:configChanges="orientation"
-32-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:23:13-48
-33            android:label="@string/title_activity_listado"
-33-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:24:13-59
-34            android:screenOrientation="sensor"
-34-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:25:13-47
-35            android:theme="@style/AppTheme.NoActionBar" />
-35-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:26:13-56
-36        <activity
-36-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:27:9-33:59
-37            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.FormularioActivity"
-37-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:28:13-53
-38            android:configChanges="orientation"
-38-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:29:13-48
-39            android:label="@string/title_activity_formulario"
-39-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:30:13-62
-40            android:parentActivityName="com.gmail.samuelhermosilla98.gamestoreapp.Views.ListadoActivity"
-40-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:31:13-64
-41            android:screenOrientation="sensor"
-41-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:32:13-47
-42            android:theme="@style/AppTheme.NoActionBar" />
-42-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:33:13-56
-43        <activity
-43-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:34:9-45:20
-44            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.LogoActivity"
-44-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:35:13-47
-45            android:configChanges="orientation"
-45-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:36:13-48
-46            android:label="@string/app_name"
-46-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:37:13-45
-47            android:screenOrientation="sensor"
-47-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:38:13-47
-48            android:theme="@style/AppTheme.NoActionBar" >
-48-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:39:13-56
-49            <intent-filter>
-49-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:40:13-44:29
-50                <action android:name="android.intent.action.MAIN" />
-50-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:41:17-69
-50-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:41:25-66
-51
-52                <category android:name="android.intent.category.LAUNCHER" />
-52-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:43:17-77
-52-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:43:27-74
-53            </intent-filter>
-54        </activity>
-55    </application>
-56
-57</manifest>
+24            android:parentActivityName="com.gmail.samuelhermosilla98.gamestoreapp.Views.ListadoActivity"
+24-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:15:13-64
+25            android:theme="@style/AppTheme.NoActionBar" />
+25-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:16:13-56
+26        <activity
+26-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:17:9-21:59
+27            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.BuscarActivity"
+27-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:18:13-49
+28            android:label="@string/title_activity_buscar"
+28-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:19:13-58
+29            android:parentActivityName="com.gmail.samuelhermosilla98.gamestoreapp.Views.ListadoActivity"
+29-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:20:13-64
+30            android:theme="@style/AppTheme.NoActionBar" />
+30-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:21:13-56
+31        <activity
+31-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:22:9-27:59
+32            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.ListadoActivity"
+32-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:23:13-50
+33            android:configChanges="orientation"
+33-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:24:13-48
+34            android:label="@string/title_activity_listado"
+34-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:25:13-59
+35            android:screenOrientation="sensor"
+35-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:26:13-47
+36            android:theme="@style/AppTheme.NoActionBar" />
+36-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:27:13-56
+37        <activity
+37-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:28:9-34:59
+38            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.FormularioActivity"
+38-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:29:13-53
+39            android:configChanges="orientation"
+39-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:30:13-48
+40            android:label="@string/title_activity_formulario"
+40-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:31:13-62
+41            android:parentActivityName="com.gmail.samuelhermosilla98.gamestoreapp.Views.ListadoActivity"
+41-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:32:13-64
+42            android:screenOrientation="sensor"
+42-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:33:13-47
+43            android:theme="@style/AppTheme.NoActionBar" />
+43-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:34:13-56
+44        <activity
+44-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:35:9-46:20
+45            android:name="com.gmail.samuelhermosilla98.gamestoreapp.Views.LogoActivity"
+45-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:36:13-47
+46            android:configChanges="orientation"
+46-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:37:13-48
+47            android:label="@string/app_name"
+47-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:38:13-45
+48            android:screenOrientation="sensor"
+48-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:39:13-47
+49            android:theme="@style/AppTheme.NoActionBar" >
+49-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:40:13-56
+50            <intent-filter>
+50-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:41:13-45:29
+51                <action android:name="android.intent.action.MAIN" />
+51-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:42:17-69
+51-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:42:25-66
+52
+53                <category android:name="android.intent.category.LAUNCHER" />
+53-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:44:17-77
+53-->D:\DRIVE\GRADO\2\DEIN\AndroidStudioProjects\GameStpreAPP\app\src\main\AndroidManifest.xml:44:27-74
+54            </intent-filter>
+55        </activity>
+56    </application>
+57
+58</manifest>

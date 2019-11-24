@@ -27,7 +27,7 @@ import com.gmail.samuelhermosilla98.gamestoreapp.R;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class Buscar extends AppCompatActivity implements BuscarInterface.View, View.OnClickListener{
+public class BuscarActivity extends AppCompatActivity implements BuscarInterface.View, View.OnClickListener{
 
     String TAG = "GameStoreAPP/BuscarActivity";
 
@@ -92,9 +92,9 @@ public class Buscar extends AppCompatActivity implements BuscarInterface.View, V
         // Definición de la lista de opciones
         ArrayList<String> items = new ArrayList<String>();
         items.add("Despliega el Spinner");
-        items.add("Buscar por nombre.");
-        items.add("Buscar por precio.");
-        items.add("Buscar por fecha.");
+        items.add("BuscarActivity por nombre.");
+        items.add("BuscarActivity por precio.");
+        items.add("BuscarActivity por fecha.");
 
         // Definición del Adaptador que contiene la lista de opciones
         adapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, items);
@@ -110,7 +110,7 @@ public class Buscar extends AppCompatActivity implements BuscarInterface.View, V
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "Pulsando botón buscar...");
-                Intent intent = new Intent(Buscar.this, ListadoActivity.class);
+                Intent intent = new Intent(BuscarActivity.this, ListadoActivity.class);
                 startActivity(intent);
                 //volvemos a la actividad listado cerrando la actividad buscar.
                 finish();

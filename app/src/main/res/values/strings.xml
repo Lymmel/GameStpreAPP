@@ -16,6 +16,7 @@
     <string name="title_activity_pickers">PickersActivity</string>
     <string name="action_nuevo"></string>
     <string name="name">Nombre: </string>
+    <string name="prize">Precio: </string>
     <string name="datos">Datos del Desarrollador: </string>
     <string name="contacto">Contacto: </string>
     <string name="prueba1">Prueba 1</string>

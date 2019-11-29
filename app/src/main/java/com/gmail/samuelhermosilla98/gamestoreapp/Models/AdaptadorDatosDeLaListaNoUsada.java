@@ -12,7 +12,7 @@ import com.bumptech.glide.Glide;
 import com.gmail.samuelhermosilla98.gamestoreapp.R;
 
 
-public class AdaptadorDatosDeLaLista extends RecyclerView.Adapter<AdaptadorDatosDeLaLista.ViewHolder> {
+public class AdaptadorDatosDeLaListaNoUsada extends RecyclerView.Adapter<AdaptadorDatosDeLaListaNoUsada.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder{
         //campos de un item
         public ImageView imagen;
@@ -24,13 +24,13 @@ public class AdaptadorDatosDeLaLista extends RecyclerView.Adapter<AdaptadorDatos
 
             imagen = (ImageView) v.findViewById(R.id.imagen);
             nombre = (TextView) v.findViewById(R.id.nombreid);
-            precio = (TextView) v.findViewById(R.id.precio);
+            precio = (TextView) v.findViewById(R.id.precioid);
         }
     }
 
     @Override
     public int getItemCount(){
-        return DatosDeLaLista.DATOS.size();
+        return DatosDeLaListaNoUsada.DATOS.size();
     }
 
     @Override
@@ -43,7 +43,7 @@ public class AdaptadorDatosDeLaLista extends RecyclerView.Adapter<AdaptadorDatos
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
 
-        DatosDeLaLista itemActual = DatosDeLaLista.DATOS.get(i);
+        DatosDeLaListaNoUsada itemActual = DatosDeLaListaNoUsada.DATOS.get(i);
 
         Glide.with(viewHolder.imagen.getContext())
                 .load(itemActual.getImagen())

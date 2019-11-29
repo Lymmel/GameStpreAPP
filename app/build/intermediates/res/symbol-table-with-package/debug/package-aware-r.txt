@@ -1103,6 +1103,7 @@ id end
 id enterAlways
 id enterAlwaysCollapsed
 id et_mostrar_fecha_picker
+id euro
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1168,9 +1169,9 @@ id parentPanel
 id parent_matrix
 id percent
 id pin
-id precio
 id precioEditText
 id precioInputLayout
+id precioid
 id progress_circular
 id progress_horizontal
 id radio
@@ -1362,6 +1363,7 @@ mipmap iao
 mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap images
+mipmap nostale
 mipmap paladins
 mipmap play
 mipmap sword
@@ -1433,6 +1435,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string prize
 string prueba1
 string prueba2
 string prueba3

@@ -1,10 +1,14 @@
 package com.gmail.samuelhermosilla98.gamestoreapp.Presenter;
 
+import android.widget.Toast;
+
 import com.gmail.samuelhermosilla98.gamestoreapp.Interfaces.ListadoInterface;
 import com.gmail.samuelhermosilla98.gamestoreapp.Models.Juego;
 import com.gmail.samuelhermosilla98.gamestoreapp.Models.JuegoModel;
+import com.gmail.samuelhermosilla98.gamestoreapp.Views.ListadoActivity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ListadoPresenter implements ListadoInterface.Presenter {
     private ListadoInterface.View view;
@@ -12,7 +16,7 @@ public class ListadoPresenter implements ListadoInterface.Presenter {
 
     public ListadoPresenter (ListadoInterface.View view){
         this.view = view;
-        juego = new JuegoModel();
+        juego = JuegoModel.getInstance();
     }
 
     public void onClickAdd(){
@@ -20,7 +24,8 @@ public class ListadoPresenter implements ListadoInterface.Presenter {
 
     }
 
-    public ArrayList<Juego> getAllPerson(){
+    //pasamos los elementos de la lista
+    public ArrayList<Juego> getAllGames(){
         return juego.getAllJuegos();
     }
 
@@ -28,4 +33,18 @@ public class ListadoPresenter implements ListadoInterface.Presenter {
     public void onClickRecyclerView(int id) {
         view.lanzarFormulario(id);
     }
+
+    //pasamos los elementos de la lista
+    public ArrayList<Juego> getAllGamesDB(){
+        return juego.leerDatosDB();
+    }
+
+    public int remove(Integer id){
+        Juego j = new Juego();
+        j.setId(id);
+
+        return juego.deleteJuego(j);
+
+    }
+
 }

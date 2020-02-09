@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="80dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="25dp"
             android:layout_marginRight="100dp"
             android:text="@string/name"
             android:textAppearance="?android:attr/textAppearanceSmall"
@@ -41,18 +41,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="-50dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="25dp"
             android:text="@string/prize"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@color/colorAccent"
             android:textSize="20dp" />
+
         <TextView
             android:id="@+id/euro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="25dp"
             android:text="€"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/fechaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-130dp"
+            android:layout_marginTop="60dp"
+            android:text="@string/fecha"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@color/colorAccent"
             android:textSize="20dp" />

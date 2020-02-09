@@ -10,8 +10,10 @@ import com.gmail.samuelhermosilla98.gamestoreapp.Models.JuegoModel;
 import com.gmail.samuelhermosilla98.gamestoreapp.Presenter.ListadoPresenter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,6 +23,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.gmail.samuelhermosilla98.gamestoreapp.R;
 
@@ -31,9 +34,22 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
     private String TAG = "GameStoreAPP/ListadoActivity";
     private RecyclerView reciclador;
     private LinearLayoutManager layoutManager;
-    private ListadoInterface.Presenter presenters;
+    private ListadoPresenter presenters;
     ArrayList<Juego> items;
     JuegoAdapter adaptador;
+    ItemTouchHelper.SimpleCallback ithsc = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT) {
+        @Override
+        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+            return false;
+        }
+
+        @Override
+        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+            items.remove(viewHolder.getAdapterPosition());
+            adaptador.notifyDataSetChanged();
+            displayToast();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +67,8 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
             public void onClick(View view) {
                 Log.d(TAG, "Pulsando botón añadir...");
                 Intent intent = new Intent(ListadoActivity.this, FormularioActivity.class);
+                intent.putExtra("juego",new Juego());
+                startActivityForResult(intent,1);
                 startActivity(intent);
             }
         });
@@ -59,14 +77,17 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
 
         reciclador = (RecyclerView) findViewById(R.id.reciclador);
 
-        TextView t = findViewById(R.id.text);
-        t.setText(JuegoModel.getAllJuegos().size()+" Elementos encontrados");
+
+
 
         layoutManager = new LinearLayoutManager(this);
         reciclador.setLayoutManager(layoutManager);
 
-        items = presenters.getAllPerson();
+        items = presenters.getAllGamesDB();
+        TextView t = findViewById(R.id.text);
+        t.setText(Integer.toString(items.size())+" Elementos");
         adaptador = new JuegoAdapter(items);
+        new ItemTouchHelper(ithsc).attachToRecyclerView(reciclador);
         reciclador.setAdapter(adaptador);
 
         // Asocia el elemento de la lista con una acción al ser pulsado
@@ -77,6 +98,7 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
                 int position = reciclador.getChildAdapterPosition(v);
                 Log.d(TAG, "Click RV: " + items.get(position).getId().toString());
                 presenters.onClickRecyclerView(items.get(position).getId());
+
             }
         });
     }
@@ -156,6 +178,47 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+
+    public void displayToast() {
+        Toast.makeText(ListadoActivity.this,"Borrado correctamente",Toast.LENGTH_SHORT).show();
+    }
+
+
+
+    public void addJuegoToAdapter(Juego j){
+        if(j!=null){
+            items.add(j);
+            this.adaptador.notifyDataSetChanged();
+
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode,resultCode,data);
+
+        switch (resultCode){
+            case 1:
+                Juego jg = data.getParcelableExtra("juego");
+                if(jg!=null){
+                    addJuegoToAdapter(jg);
+                    contadorDB();
+                }
+            break;
+        }
+    }
+
+    public void contadorDB(){
+        TextView t = findViewById(R.id.text);
+        try{
+            int actualContador = Integer.parseInt(t.getText().toString().trim());
+            t.setText(Integer.toString(actualContador ++));
+
+        }catch (Exception e){
+
         }
     }
 

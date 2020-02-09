@@ -35,7 +35,7 @@
                 android:hint="Nombre">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/nombreEditText"
+                    android:id="@+id/nombreEditTextInsert"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@android:drawable/sym_def_app_icon"/>

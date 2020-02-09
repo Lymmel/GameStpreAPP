@@ -2,6 +2,7 @@ package com.gmail.samuelhermosilla98.gamestoreapp.Views;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.gmail.samuelhermosilla98.gamestoreapp.Models.Juego;
@@ -32,27 +34,39 @@ public class JuegoAdapter extends RecyclerView.Adapter<JuegoAdapter.Acontecimien
 
         private TextView TextView_nombre;
         private TextView TextView_precio;
+        private TextView TextView_fecha;
         private ImageView ImageView_image;
 
         public AcontecimientoViewHolder(View itemView) {
             super(itemView);
             TextView_nombre = (TextView) itemView.findViewById(R.id.nombreid);
             TextView_precio = (TextView) itemView.findViewById(R.id.precioid);
+            TextView_fecha = (TextView) itemView.findViewById(R.id.fechaid);
             ImageView_image = (ImageView) itemView.findViewById(R.id.imagen);
         }
 
         public void AcontecimientoBind(Juego item) {
             TextView_nombre.setText(item.getNombre());
             TextView_precio.setText(item.getPrecio().toString());
-            byte[] decodedString = Base64.decode(item.getImagen(), Base64.DEFAULT);
-            Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
-            ImageView_image.setImageBitmap(decodedByte);
+            TextView_fecha.setText(item.getFecha());
+            if(item.getImagen()!=null){
+                byte[] decodedString = Base64.decode(item.getImagen(), Base64.DEFAULT);
+                Bitmap decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.length);
+                ImageView_image.setImageBitmap(decodedByte);
+            }else{
+                ImageView_image.setImageDrawable(MyApplication.getContext().getResources().getDrawable(R.drawable.ic_launcher_background));
+            }
         }
     }
 
     // Contruye el objeto adaptador recibiendo la lista de datos
     public JuegoAdapter(@NonNull List<Juego> items) {
-        this.items = items;
+        if(items!=null){
+            this.items = items;
+        }else{
+            this.items = new ArrayList<>();
+
+        }
     }
 
     // Se encarga de crear los nuevos objetos ViewHolder necesarios

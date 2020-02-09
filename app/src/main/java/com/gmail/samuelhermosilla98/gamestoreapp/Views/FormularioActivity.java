@@ -1,5 +1,6 @@
 package com.gmail.samuelhermosilla98.gamestoreapp.Views;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Context;
@@ -8,12 +9,15 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.gmail.samuelhermosilla98.gamestoreapp.Interfaces.FormularioInterface;
+import com.gmail.samuelhermosilla98.gamestoreapp.Models.Desplegable;
+import com.gmail.samuelhermosilla98.gamestoreapp.Models.Juego;
 import com.gmail.samuelhermosilla98.gamestoreapp.Presenter.FormularioPresenter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,11 +29,14 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import com.gmail.samuelhermosilla98.gamestoreapp.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -39,13 +46,19 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
     //Spinner
     private Spinner spinner;
     private ArrayAdapter<String> adapter;
+    private Juego jg;
 
     String TAG = "GameStoreAPP/FormularioActivity";
-    private FormularioInterface.Presenter presenter;
+    private FormularioPresenter presenter;
 
     private static final String CERO = "0";
     private static final String BARRA = "/";
+    final private int CODE_READ_EXTERNAL_STORAGE_PERMISSION = 123;
 
+    //modelo
+    TextInputEditText nombreEditText;
+    TextInputEditText precioEditText;
+    TextInputEditText fechaEditText;
 
     //inicio DatePicker variables
     //Calendario para obtener fecha & hora
@@ -60,6 +73,7 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
     EditText etFecha;
     ImageButton ibObtenerFecha;
     //fin DatePicker variables
+    ImageView galleryImageView;
 
     //Alert Dialog button
     private Button mButton;
@@ -72,6 +86,8 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
         setContentView(R.layout.activity_formulario);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        this.jg=getIntent().getExtras().getParcelable("juego");
 
         //DatePicker
         //Widget EditText donde se mostrara la fecha obtenida
@@ -89,13 +105,35 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
 
 
 
-        FloatingActionButton fab = findViewById(R.id.añadir);
+
+        nombreEditText = (TextInputEditText) findViewById(R.id.nombreEditTextInsert);
+        precioEditText = (TextInputEditText) findViewById(R.id.precioEditTextInsert);
+        fechaEditText = (TextInputEditText) findViewById(R.id.et_mostrar_fecha_picker);
+        spinner = findViewById(R.id.spinnerrr);
+        FloatingActionButton fab = findViewById(R.id.save);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "Pulsando botón guardar...");
-                Intent intent = new Intent(FormularioActivity.this, ListadoActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent(FormularioActivity.this, ListadoActivity.class);
+                //startActivity(intent);
+                if(jg.getId()==null){
+                    jg.setNombre(nombreEditText.getText().toString());
+                    jg.setPrecio(Integer.parseInt(precioEditText.getText().toString()));
+                    jg.setFecha(fechaEditText.getText().toString());
+
+                    Desplegable desple = new Desplegable();
+                    desple.setTexto(spinner.getSelectedItem().toString());
+                    presenter.onClickSaveButton(jg, desple);
+                    Intent resultIntent = new Intent();
+                    resultIntent.putExtra("juego",jg);
+                    setResult(1,resultIntent);
+                    finish();
+                }
+                /*
+                comprobar todos los set y if correcto, presenter.onClickSaveButton...
+                else error.
+                 */
             }
         });
 
@@ -122,7 +160,7 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
         spinner.setAdapter(adapter);
 
         //Comprobar Nombre a través del Presenter
-        TextInputEditText nombreEditText = (TextInputEditText) findViewById(R.id.nombreEditText);
+        TextInputEditText nombreEditText = (TextInputEditText) findViewById(R.id.nombreEditTextInsert);
         nombreEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             //onFocusChange es un método establecido en FormularioPresenter
@@ -145,7 +183,7 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
         });
 
         //Comprobar Precio a través del Presenter
-        TextInputEditText precioEditText = (TextInputEditText) findViewById(R.id.precioEditText);
+        TextInputEditText precioEditText = (TextInputEditText) findViewById(R.id.precioEditTextInsert);
         precioEditText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             //onFocusChange es un método establecido en FormularioPresenter
@@ -171,7 +209,7 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
 
 
 
-        mButton = (Button) findViewById(R.id.addtospinner);
+        mButton = findViewById(R.id.addtospinner);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -202,7 +240,7 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
         });
 
 
-        delAlertBt = (Button) findViewById(R.id.delete);
+        delAlertBt = findViewById(R.id.delete);
         delAlertBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -226,6 +264,19 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
                 title.show();
             }
         });
+
+
+        galleryImageView = findViewById(R.id.gallery);
+        galleryImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.onclickImage(v.getContext());
+                Log.d(TAG, "Pulsando botón abrir galería...");
+            }
+        });
+
+
+
     }
 
     //DatePicker methods
@@ -335,6 +386,28 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
         Log.d(TAG, "Ejecutando onDestroy...");
     }
 
+
+    @Override
+    public void requestPermission() {
+        ActivityCompat.requestPermissions(FormularioActivity.this, new String[] {Manifest.permission.READ_EXTERNAL_STORAGE}, CODE_READ_EXTERNAL_STORAGE_PERMISSION);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case CODE_READ_EXTERNAL_STORAGE_PERMISSION:
+                presenter.resultPermission(grantResults[0]);
+                break;
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+
+
+
+    public void addJuegoToAdapter(){
+
+    }
 
 
 

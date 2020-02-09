@@ -25,5 +25,6 @@
     <string name="añadeImg">Añade tu imagen:</string>
     <string name="todocorrecto">¿Todo correcto?</string>
     <string name="addtosp">Añadir al Spinner</string>
+    <string name="fecha">Fecha:</string>
 
 </resources>

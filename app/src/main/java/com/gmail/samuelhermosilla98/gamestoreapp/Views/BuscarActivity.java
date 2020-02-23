@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.gmail.samuelhermosilla98.gamestoreapp.Interfaces.BuscarInterface;
+import com.gmail.samuelhermosilla98.gamestoreapp.Models.Juego;
 import com.gmail.samuelhermosilla98.gamestoreapp.Presenter.BuscarPresenter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -23,6 +24,7 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import com.gmail.samuelhermosilla98.gamestoreapp.R;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -54,12 +56,26 @@ public class BuscarActivity extends AppCompatActivity implements BuscarInterface
     ImageButton ibObtenerFecha;
     //fin DatePicker variables
 
+    EditText nombreEditText;
+    EditText fechaEditText;
+
+    JuegoAdapter adapt;
+    ArrayList<Juego> itemsNm;
+    ArrayList<Juego> itemsFec;
+
+    private BuscarPresenter presentador;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscar);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        presentador = new BuscarPresenter(this);
+
+        nombreEditText = ((TextInputLayout) findViewById(R.id.nombreInputLayoutS)).getEditText();
+        fechaEditText = ((TextInputLayout) findViewById(R.id.fechaInputLayoutS)).getEditText();
 
         // Get a support ActionBar corresponding to this toolbar
         ActionBar ab = getSupportActionBar();
@@ -78,44 +94,50 @@ public class BuscarActivity extends AppCompatActivity implements BuscarInterface
 
         presenter = new BuscarPresenter(this);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
 
 
-        // Definición de la lista de opciones
-        ArrayList<String> items = new ArrayList<String>();
-        items.add("Despliega el Spinner");
-        items.add("BuscarActivity por nombre.");
-        items.add("BuscarActivity por precio.");
-        items.add("BuscarActivity por fecha.");
-
-        // Definición del Adaptador que contiene la lista de opciones
-        adapter = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, items);
-        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-
-        // Definición del Spinner
-        spinner = (Spinner) findViewById(R.id.spinnerrr);
-        spinner.setAdapter(adapter);
 
 
-        Button BSearch = findViewById(R.id.buttonSearch);
-        BSearch.setOnClickListener(new View.OnClickListener() {
+
+
+
+        Button BSearchN = findViewById(R.id.buttonSearchN);
+        BSearchN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String nombre;
+                nombre=nombreEditText.getText().toString();
                 Log.d(TAG, "Pulsando botón buscar...");
-                Intent intent = new Intent(BuscarActivity.this, ListadoActivity.class);
-                startActivity(intent);
+                Intent intent = new Intent();
                 //volvemos a la actividad listado cerrando la actividad buscar.
+                itemsNm = presentador.searchByName(nombre);
+                intent.putExtra("juegos",itemsFec);
+                setResult(2,intent);
+
                 finish();
             }
         });
+
+        Button BSearchF = findViewById(R.id.buttonSearchF);
+        BSearchF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String fecha;
+                fecha=fechaEditText.getText().toString();
+                Log.d(TAG, "Pulsando botón buscar...");
+                Intent intent = new Intent();
+                itemsFec = presentador.searchByDate(fecha);
+                intent.putExtra("juegos",itemsFec);
+                //volvemos a la actividad listado cerrando la actividad buscar.
+                setResult(2,intent);
+                finish();
+            }
+        });
+
+
+
+
     }
 
 
@@ -194,4 +216,7 @@ public class BuscarActivity extends AppCompatActivity implements BuscarInterface
     public void lanzarFormulario() {
 
     }
+
+
+
 }

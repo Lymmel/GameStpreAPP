@@ -66,16 +66,14 @@ public class FormularioPresenter implements FormularioInterface.Presenter{
     @Override
     public void onClickSaveButton(Juego newJuego, Desplegable newDesplegable) {
         if ( model.addNewGame(newJuego)){
-
-
-
             if(model.addNewDesplegable(newDesplegable)){
-
             }else{
-
             }
         }else{
-
         }
+    }
+
+    public int updateGame(Juego jgEdit){
+        return model.updateJuego(jgEdit);
     }
 }

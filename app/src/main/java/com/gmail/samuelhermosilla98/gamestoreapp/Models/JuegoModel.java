@@ -259,7 +259,7 @@ public class JuegoModel extends SQLiteOpenHelper{
 
                 if (cur.moveToFirst()) {
                     do {
-                        Log.d("zsdfjslfjg","dentro");
+                        Log.d("pruebaIn","dentro");
                         jueg = new Juego();
 
                         jueg.setId(cur.getInt(0));
@@ -270,7 +270,86 @@ public class JuegoModel extends SQLiteOpenHelper{
                         jueg.setImagen(cur.getString(4));
 
                         juegos.add(jueg);
-                        Log.d("zsdfjslfjg","saliendo");
+                        Log.d("pruebaOut","saliendo");
+
+                    } while(cur.moveToNext());
+                }
+            } catch (Exception e) {
+                Log.d("error", e.getMessage());
+                Log.d(TAG, "Error while trying to read game to database");
+            } finally {
+                db.close();
+            }
+        }
+        return juegos;
+    }
+
+    public ArrayList<Juego> leerDatosDBByName(String n){
+        ArrayList<Juego> juegos = new ArrayList<>();
+        Juego jueg=null;
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cur;
+        String[] columns = new String[]{"id","nombre","precio","fecha","imagen"};
+        String[] nm = new String[]{n};
+        if (db != null) {
+            try {
+
+                cur = db.query("Games", columns, "nombre=?", nm, null, null, null);
+
+                if (cur.moveToFirst()) {
+                    do {
+                        Log.d("pruebaIn","dentro");
+                        jueg = new Juego();
+
+                        jueg.setId(cur.getInt(0));
+
+                        jueg.setNombre(cur.getString(1));
+                        jueg.setPrecio(cur.getInt(2));
+                        jueg.setFecha(cur.getString(3));
+                        jueg.setImagen(cur.getString(4));
+
+                        juegos.add(jueg);
+                        Log.d("pruebaOut","saliendo");
+
+                    } while(cur.moveToNext());
+                }
+            } catch (Exception e) {
+                Log.d("error", e.getMessage());
+                Log.d(TAG, "Error while trying to read game to database");
+            } finally {
+                db.close();
+            }
+        }
+        return juegos;
+    }
+
+
+    public ArrayList<Juego> leerDatosDBByFecha(String n){
+        ArrayList<Juego> juegos = new ArrayList<>();
+        Juego jueg=null;
+        SQLiteDatabase db = getWritableDatabase();
+        Cursor cur;
+        String[] columns = new String[]{"id","nombre","precio","fecha","imagen"};
+        String[] fech = new String[]{n};
+        if (db != null) {
+            try {
+
+                cur = db.query("Games", columns, "fecha=?", fech, null, null, null);
+
+                if (cur.moveToFirst()) {
+                    do {
+                        Log.d("pruebaIn","dentro");
+                        jueg = new Juego();
+
+                        jueg.setId(cur.getInt(0));
+
+                        jueg.setNombre(cur.getString(1));
+                        jueg.setPrecio(cur.getInt(2));
+                        jueg.setFecha(cur.getString(3));
+                        jueg.setImagen(cur.getString(4));
+
+                        juegos.add(jueg);
+                        Log.d("pruebaOut","saliendo");
 
                     } while(cur.moveToNext());
                 }

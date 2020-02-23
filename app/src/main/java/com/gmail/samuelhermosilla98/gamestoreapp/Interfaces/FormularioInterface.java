@@ -17,8 +17,11 @@ public interface FormularioInterface {
         void onclickImage(Context myContext);
         void resultPermission(int result);
         void onClickSaveButton(Juego newJuego, Desplegable newDesplegable);
+        int updateGame(Juego jgEdit);
+
 
     }
+
 
 
 }

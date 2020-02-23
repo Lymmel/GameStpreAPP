@@ -95,10 +95,12 @@ public class Juego implements Parcelable {
         return imagen;
     }
 
-    public void setImagen(String imagen) {
+    public Boolean setImagen(String imagen) {
         if(imagen!=null){
             this.imagen = imagen;
+            return true;
         }
+        return false;
     }
 
     public String getFecha() {
@@ -158,5 +160,14 @@ public class Juego implements Parcelable {
         dest.writeString(imagen);
     }
 
-
+    @Override
+    public String toString() {
+        return "Juego{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", precio=" + precio +
+                ", fecha='" + fecha + '\'' +
+                ", imagen='" + imagen + '\'' +
+                '}';
+    }
 }

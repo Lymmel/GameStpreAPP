@@ -69,6 +69,11 @@ public class JuegoAdapter extends RecyclerView.Adapter<JuegoAdapter.Acontecimien
         }
     }
 
+    public void setItem(List<Juego> juegos){
+        this.items=juegos;
+        notifyDataSetChanged();
+    }
+
     // Se encarga de crear los nuevos objetos ViewHolder necesarios
     // para los elementos de la colección.
     // Infla la vista del layout, crea y devuelve el objeto ViewHolder

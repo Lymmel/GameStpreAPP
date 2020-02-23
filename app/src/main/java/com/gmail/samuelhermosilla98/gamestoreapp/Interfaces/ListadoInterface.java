@@ -9,16 +9,16 @@ import java.util.List;
 public interface ListadoInterface {
     interface View {
         void lanzarFormulario();
-        void lanzarFormulario(int id);
+        void lanzarFormulario(Juego jg);
     }
 
     interface Presenter{
-        void onClickAdd();
+        //void onClickAdd();
         ArrayList<Juego> getAllGames();
-        void onClickRecyclerView(int id);
+        void onClickRecyclerView(Juego jg);
         ArrayList<Juego> getAllGamesDB();
         int remove(Integer id);
-
+        int updateGame(Juego jgEdit);
     }
 }
 

@@ -6,6 +6,7 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
 
 import com.gmail.samuelhermosilla98.gamestoreapp.Interfaces.FormularioInterface;
@@ -47,6 +48,7 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
     private Spinner spinner;
     private ArrayAdapter<String> adapter;
     private Juego jg;
+    private Integer idUp;
 
     String TAG = "GameStoreAPP/FormularioActivity";
     private FormularioPresenter presenter;
@@ -56,9 +58,9 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
     final private int CODE_READ_EXTERNAL_STORAGE_PERMISSION = 123;
 
     //modelo
-    TextInputEditText nombreEditText;
-    TextInputEditText precioEditText;
-    TextInputEditText fechaEditText;
+    EditText nombreEditText;
+    EditText precioEditText;
+    EditText fechaEditText;
 
     //inicio DatePicker variables
     //Calendario para obtener fecha & hora
@@ -87,7 +89,27 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        this.jg=getIntent().getExtras().getParcelable("juego");
+
+        nombreEditText = ((TextInputLayout) findViewById(R.id.nombreInputLayout)).getEditText();
+        precioEditText = ((TextInputLayout) findViewById(R.id.precioInputLayout)).getEditText();
+        fechaEditText = ((TextInputLayout) findViewById(R.id.fechaInputLayout)).getEditText();
+
+
+        Bundle bl = getIntent().getExtras();
+        if(bl != null){
+            this.jg=bl.getParcelable(ListadoActivity.JUEGO_KEY);
+            if(jg!=null){
+
+                if(jg.getId()==null){
+                    Log.d(TAG,"insertando nuevo");
+                }else{
+                    Log.d(TAG,"modificando"+jg.toString());
+                    this.rellenarForm();
+                }
+            }
+
+
+        }
 
         //DatePicker
         //Widget EditText donde se mostrara la fecha obtenida
@@ -106,11 +128,11 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
 
 
 
-        nombreEditText = (TextInputEditText) findViewById(R.id.nombreEditTextInsert);
-        precioEditText = (TextInputEditText) findViewById(R.id.precioEditTextInsert);
-        fechaEditText = (TextInputEditText) findViewById(R.id.et_mostrar_fecha_picker);
+
+
+
         spinner = findViewById(R.id.spinnerrr);
-        FloatingActionButton fab = findViewById(R.id.save);
+        final FloatingActionButton fab = findViewById(R.id.save);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -124,16 +146,41 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
 
                     Desplegable desple = new Desplegable();
                     desple.setTexto(spinner.getSelectedItem().toString());
+                    Log.d(TAG,"botón añadir"+jg.toString());
                     presenter.onClickSaveButton(jg, desple);
                     Intent resultIntent = new Intent();
                     resultIntent.putExtra("juego",jg);
                     setResult(1,resultIntent);
                     finish();
+                }else{
+                    jg.setNombre(nombreEditText.getText().toString());
+                    jg.setPrecio(Integer.parseInt(precioEditText.getText().toString()));
+                    jg.setFecha(fechaEditText.getText().toString());
+
+                    Desplegable desple = new Desplegable();
+                    desple.setTexto(spinner.getSelectedItem().toString());
+                    Log.d(TAG,"botón actualizar"+jg.toString());
+                    presenter.updateGame(jg);
+                    fab.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            AlertDialog.Builder alert = new AlertDialog.Builder(FormularioActivity.this);
+                            alert.setMessage("Actualizado correctamente")
+                                    .setCancelable(false)
+                                    .setPositiveButton("Volver al listado", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            Intent intentUpdate = new Intent(FormularioActivity.this, ListadoActivity.class);
+                                            startActivity(intentUpdate);
+                                        }
+                                    });
+                            AlertDialog title = alert.create();
+                            title.setTitle("Actualizar");
+                            title.show();
+
+                        }
+                    });
                 }
-                /*
-                comprobar todos los set y if correcto, presenter.onClickSaveButton...
-                else error.
-                 */
             }
         });
 
@@ -279,6 +326,14 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
 
     }
 
+
+    private void rellenarForm() {
+
+        this.nombreEditText.setText(this.jg.getNombre());
+        this.precioEditText.setText(String.valueOf(this.jg.getPrecio()));
+        this.fechaEditText.setText(this.jg.getFecha());
+    }
+
     //DatePicker methods
     @Override
     public void onClick(View v) {
@@ -327,9 +382,7 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.action_settings2:
-                Intent intent2 = new Intent(FormularioActivity.this, ListadoActivity.class);
-                startActivity(intent2);
-                return true;
+
             case R.id.action_settings4:
                 Intent intent4 = new Intent(FormularioActivity.this, ListadoActivity.class);
                 startActivity(intent4);

@@ -18,11 +18,11 @@ public class ListadoPresenter implements ListadoInterface.Presenter {
         this.view = view;
         juego = JuegoModel.getInstance();
     }
-
+/*
     public void onClickAdd(){
         view.lanzarFormulario(-1);
 
-    }
+    }*/
 
     //pasamos los elementos de la lista
     public ArrayList<Juego> getAllGames(){
@@ -30,8 +30,8 @@ public class ListadoPresenter implements ListadoInterface.Presenter {
     }
 
     @Override
-    public void onClickRecyclerView(int id) {
-        view.lanzarFormulario(id);
+    public void onClickRecyclerView(Juego jg) {
+        view.lanzarFormulario(jg);
     }
 
     //pasamos los elementos de la lista
@@ -45,6 +45,10 @@ public class ListadoPresenter implements ListadoInterface.Presenter {
 
         return juego.deleteJuego(j);
 
+    }
+
+    public int updateGame(Juego jgEdit){
+        return juego.updateJuego(jgEdit);
     }
 
 }

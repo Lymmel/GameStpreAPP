@@ -1,5 +1,7 @@
 package com.gmail.samuelhermosilla98.gamestoreapp.Views;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Bundle;
@@ -31,6 +33,7 @@ import java.util.ArrayList;
 
 public class ListadoActivity extends AppCompatActivity implements ListadoInterface.View {
 
+    public static final String JUEGO_KEY="JUEGO";
     private String TAG = "GameStoreAPP/ListadoActivity";
     private RecyclerView reciclador;
     private LinearLayoutManager layoutManager;
@@ -44,10 +47,36 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
         }
 
         @Override
-        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-            items.remove(viewHolder.getAdapterPosition());
-            adaptador.notifyDataSetChanged();
-            displayToast();
+        public void onSwiped(@NonNull final RecyclerView.ViewHolder viewHolder, int direction) {
+            AlertDialog.Builder alert = new AlertDialog.Builder(ListadoActivity.this);
+            alert.setMessage("¿Estás seguro de eliminar este item?")
+                    .setCancelable(false)
+                    .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            int position=viewHolder.getAdapterPosition();
+                            Integer id = items.get(position).getId();
+                            items.remove(position);
+                            presenters.remove(id);
+                            adaptador.notifyDataSetChanged();
+
+                            displayToast();
+
+                            dialog.dismiss();
+                        }
+                    })
+                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            int position=viewHolder.getAdapterPosition();
+                            adaptador.notifyItemChanged(position);
+                            dialog.cancel();
+                        }
+                    });
+            AlertDialog title = alert.create();
+            title.setTitle("Borrar");
+            title.show();
+
         }
     };
 
@@ -67,7 +96,7 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
             public void onClick(View view) {
                 Log.d(TAG, "Pulsando botón añadir...");
                 Intent intent = new Intent(ListadoActivity.this, FormularioActivity.class);
-                intent.putExtra("juego",new Juego());
+                intent.putExtra(JUEGO_KEY,new Juego());
                 startActivityForResult(intent,1);
                 startActivity(intent);
             }
@@ -97,7 +126,7 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
                 // Acción al pulsar el elemento
                 int position = reciclador.getChildAdapterPosition(v);
                 Log.d(TAG, "Click RV: " + items.get(position).getId().toString());
-                presenters.onClickRecyclerView(items.get(position).getId());
+                presenters.onClickRecyclerView(items.get(position));
 
             }
         });
@@ -106,17 +135,18 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
     @Override
     public void lanzarFormulario() {
         Intent intent = new Intent(ListadoActivity.this, FormularioActivity.class);
+
         startActivity(intent);
     }
 
     @Override
-    public void lanzarFormulario(int id) {
-        if(id == -1){
+    public void lanzarFormulario(Juego jg) {
+        if(jg == null){
             Intent intent = new Intent(ListadoActivity.this, FormularioActivity.class);
             startActivity(intent);
         }else{
             Intent intent = new Intent(ListadoActivity.this, FormularioActivity.class);
-            //bundle
+            intent.putExtra(JUEGO_KEY, jg );
             startActivity(intent);
         }
     }
@@ -170,7 +200,7 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
         switch (item.getItemId()) {
             case R.id.action_settings:
                 Intent intent2 = new Intent(ListadoActivity.this, BuscarActivity.class);
-                startActivity(intent2);
+                startActivityForResult(intent2,2);
                 return true;
             case R.id.action_settings222:
                 Intent intent3 = new Intent(ListadoActivity.this, SobreAppCRUDActivity.class);
@@ -208,7 +238,15 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
                     contadorDB();
                 }
             break;
+
+            case 2:
+                ArrayList<Juego> jgg = data.getExtras().getParcelableArrayList("juegos");
+                adaptador.setItem(jgg);
+                break;
+
         }
+
+
     }
 
     public void contadorDB(){

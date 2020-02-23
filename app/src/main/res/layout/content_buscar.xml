@@ -29,7 +29,7 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/nombreInputLayout"
+                android:id="@+id/nombreInputLayoutS"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Nombre">
@@ -41,12 +41,6 @@
                     android:drawableLeft="@android:drawable/sym_def_app_icon"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <Spinner
-                android:id="@+id/spinnerrr"
-                android:layout_marginTop="50dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                />
 
             <ImageButton
                 android:id="@+id/imageButton2"
@@ -56,7 +50,7 @@
                 android:layout_marginTop="50dp"/>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/fechaInputLayout"
+                android:id="@+id/fechaInputLayoutS"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="">
@@ -75,16 +69,27 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView"
                     />
 
-                <Button
-                    android:id="@+id/buttonSearch"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Buscar"
-                    android:layout_marginTop="50dp"/>
+
 
 
             </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/buttonSearchN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Buscar por nombre"
+                android:layout_marginTop="50dp"/>
+
+            <Button
+                android:id="@+id/buttonSearchF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Buscar por fecha"
+                android:layout_marginTop="50dp"/>
+
 
 
         </LinearLayout>

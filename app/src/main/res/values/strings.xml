@@ -26,5 +26,6 @@
     <string name="todocorrecto">¿Todo correcto?</string>
     <string name="addtosp">Añadir al Spinner</string>
     <string name="fecha">Fecha:</string>
+    <string name="title_activity_ayuda">Ayuda</string>
 
 </resources>

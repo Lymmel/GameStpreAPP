@@ -38,6 +38,7 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
     private RecyclerView reciclador;
     private LinearLayoutManager layoutManager;
     private ListadoPresenter presenters;
+    String pages="https://lymmel.github.io/GameStpreAPP/";
     ArrayList<Juego> items;
     JuegoAdapter adaptador;
     ItemTouchHelper.SimpleCallback ithsc = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT) {
@@ -205,6 +206,11 @@ public class ListadoActivity extends AppCompatActivity implements ListadoInterfa
             case R.id.action_settings222:
                 Intent intent3 = new Intent(ListadoActivity.this, SobreAppCRUDActivity.class);
                 startActivity(intent3);
+                return true;
+            case R.id.action_settings222help:
+                Intent intent33 = new Intent();
+                intent33.putExtra(pages,"https://lymmel.github.io/GameStpreAPP/");
+                startActivity(intent33);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

@@ -49,6 +49,7 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
     private ArrayAdapter<String> adapter;
     private Juego jg;
     private Integer idUp;
+    String pages="https://lymmel.github.io/GameStpreAPP/";
 
     String TAG = "GameStoreAPP/FormularioActivity";
     private FormularioPresenter presenter;
@@ -388,8 +389,13 @@ public class FormularioActivity extends AppCompatActivity implements FormularioI
                 startActivity(intent4);
                 return true;
             case R.id.action_settings3:
-                Intent intent3 = new Intent(FormularioActivity.this, FormularioActivity.class);
+                Intent intent3 = new Intent(FormularioActivity.this, SobreAppCRUDActivity.class);
                 startActivity(intent3);
+                return true;
+            case R.id.action_settings222help:
+                Intent intent33 = new Intent();
+                intent33.putExtra(pages,"https://lymmel.github.io/GameStpreAPP/");
+                startActivity(intent33);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
